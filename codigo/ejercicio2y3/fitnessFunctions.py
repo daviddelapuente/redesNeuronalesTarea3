@@ -11,3 +11,11 @@ def fit(arbolCandidato,arbolReal,intervalo):
 def fit2(arbolCandidato,arbolReal,intervalo):
 
     return fit(arbolCandidato,arbolReal,intervalo)-abs(len(arbolReal.serialize())-len(arbolCandidato.serialize()))*0.2
+
+
+def fit3(ac,ar,intervalo):
+    rate=0
+    for i in intervalo:
+        d={"x":i}
+        rate+=abs(ac.eval(d)-ar.eval(d))
+    return -1*rate

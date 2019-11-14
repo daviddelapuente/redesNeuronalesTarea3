@@ -143,7 +143,7 @@ def engineEncontrarEcuacion(fitnessFunction,arbolReal,intervalo,trys,populationL
                 maxfit=F[i]
                 best=i
 
-            if maxfit==200:
+            if maxfit==0:
                
                 print("encontrada!")
                 print("en iteracion "+str(t))
