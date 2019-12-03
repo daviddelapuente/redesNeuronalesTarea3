@@ -30,7 +30,7 @@ analisis:
 Reference-style: 
 ![alt text][porcentaje]
 
-[porcentaje]: ejercicio1/fitnessEvolConrep.png
+[porcentaje]: codigo/ejercicio1/fitnessEvolConrep.png
 
 
 
