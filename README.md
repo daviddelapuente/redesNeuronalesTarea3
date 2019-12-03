@@ -28,9 +28,9 @@ para correr el codigo con graficos:
 
 analisis:
 Reference-style: 
-![alt text][porcentaje]
+![alt text][fit1]
 
-[porcentaje]: codigo/ejercicio1/fitnessEvolConrep.png
+[fit1]: codigo/ejercicio1/fitnessEvolConrep.png
 
 
 para este grafico se uso la funcion fit1, que puede encontrarse en el archivo fitnessFunctions en la carpeta ejercicio1. es una funcion bastante simple que lo que hace es calcular que tan lejos esta la evaluacion de el arbol con el numero buscado.
@@ -62,9 +62,9 @@ para correr el codigo con graficos:
 
 analisis:
 Reference-style: 
-![alt text][porcentaje]
+![alt text][fit2]
 
-[porcentaje]: codigo/ejercicio1/fitnessEvolConrepConcast.png
+[fit2]: codigo/ejercicio1/fitnessEvolConrepConcast.png
 
 
 para este grafico se uso la funcion fit2, que puede encontrarse en el archivo fitnessFunctions en la carpeta ejercicio1. es una funcion bastante simple que lo que hace es calcular que tan lejos esta la evaluacion de el arbol con el numero buscado, pero ademas se le resta el largo de el arbol/100 (el 100 aparece empiricamente, ya que los tamanos de los arboles pueden ser muy grandes y matan la funcion fitness).
@@ -96,12 +96,12 @@ para correr el codigo con graficos:
 
 analisis:
 Reference-style: 
-![alt text][porcentaje]
+![alt text][fit3]
 
-[porcentaje]: codigo/ejercicio1/fitnessEvolsinrep.png
+[fit3]: codigo/ejercicio1/fitnessEvolsinrep.png
 
 
-para este grafico se uso la funcion fit3, que puede encontrarse en el archivo fitnessFunctions en la carpeta ejercicio1. es una funcion un poco mas compleja, pero lo que hace es contar el numero de terminales repetidos y se los resta la distancia entre el numero buscado y la evaluacion de el arbol, ponderado por 2000 (el cual se encontro empiricamente).
+para este grafico se uso la funcion fit3, que puede encontrarse en el archivo fitnessFunctions en la carpeta ejercicio1. es una funcion un poco mas compleja, pero lo que hace es contar el numero de terminales repetidos y se los resta la distancia entre el numero buscado y la evaluacion de el arbol, ponderado por 2000 (el cual se encontro empiricamente). se puede observar tambien que el grafico es mucho menos inestable y alcanza peores evaluaciones que los anteriores fitness, pero se gana mucho encuanto a memoria de el arbol.
 
 ## ejercicio 2
 
