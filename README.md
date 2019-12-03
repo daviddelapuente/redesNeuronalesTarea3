@@ -198,7 +198,7 @@ para correr el codigo sin graficos:
 
     debes estar en la carpeta ejercicio4 y correr el siguiente codigo en la terminal
     
-            python3 probandoEjercicio4.py singgraf
+            python3 probandoEjercicio4.py singraf
 
     con esto buscaras la funcion x*x + x -6 usando la funcion fit4 que se puede encontrar en el archivo fitnessFunctions.py de la carpeta ejercicio4
     en la terminal se mostrara el arbol encontrado y el fitness.
