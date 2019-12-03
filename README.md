@@ -103,9 +103,73 @@ Reference-style:
 
 para este grafico se uso la funcion fit3, que puede encontrarse en el archivo fitnessFunctions en la carpeta ejercicio1. es una funcion un poco mas compleja, pero lo que hace es contar el numero de terminales repetidos y se los resta la distancia entre el numero buscado y la evaluacion de el arbol, ponderado por 2000 (el cual se encontro empiricamente). se puede observar tambien que el grafico es mucho menos inestable y alcanza peores evaluaciones que los anteriores fitness, pero se gana mucho encuanto a memoria de el arbol.
 
-## ejercicio 2
+## ejercicio 2 y 3
 
-## ejercicio 3
+como queremos soportar evaluaciones de variables, se agrego un diccionario a la evaluacion de los nodos terminales (en el archivo arboles.py).
+para esto, todo nodo no terminal al momento de evaluar recibe un diccionario (con las respectivas llaves y valores numericos), luego evalua a sus hijos con este diccionario, por ultimo en el nodo terminales se pregunta si el valor de el nodo es un string, de ser asi se usa ese valor como llave en el diccionario.
+
+### symbolic regresion
+
+para este ejercicio lo que haremos sera buscar un arbol que represente la funcion (x*x+x-6)=arbolReal. usaremos como terminales [-10,...,10] U {x} y como funciones {+,-,*}.
+
+se hicieron 3 experimentos con 3 funciones fitness distintas (las que se pueden ver en el archivo fitnessFunctions.py de la carpeta ejercicio2y3).
+la primera funcion fue bastante basica, y lo que hace es evaluar en el intervalo [-100,...,100] todos los puntos de el arbolReal y las de el arbol que se esta probando y contar cuantos aciertos tiene.
+veamos la evolucion de su fitness.
+
+analisis:
+Reference-style: 
+![alt text][fit4]
+
+[fit4]: codigo/ejercicio2y3/ecuacionConFit1.png
+
+como podemos observar en el grafico, la mayoria de las veces el fit es de 0, 1 o 2 representando la cantidad de veces que las 2 funciones se tocan (notamos que el mejor caso es 200 cuando se tocan en todos los puntos pero es casi improbable que eso ocurra! almenos con este fit)
+
+es por esto que se cambia la funcion fitness. con la funcion fit2, se hace lo mismo que con fit1 pero se castiga si el largo de el arbol que se esta evaluando es muy distinto de el arbolReal (esto bajo el supuesto de que los arboles deben parecerse en altura)
+veamos la evolucion de el nuevo fitness.
+
+
+
+Reference-style: 
+![alt text][fit5]
+
+[fit5]: codigo/ejercicio2y3/ecuacionConFit2.png
+
+el nuevo grafico nos muestra un fitness que sube un poquito a lo largo de el tiempo, si bien las funciones siguen siendo muy distintas, el largo de los arboles ya no es tan distinto, por lo que los posibles arboles que se forman al azar, tienen mas probabilidad de parecerse al arbol que buscamos. :)
+
+cambiando un poco el paradigma de como buscar la funcion, esta vez se cambia a una funcion fit3 que lo que hace es por cada punto en [-100,100] calcular la diferencia entre la evaluacion de el arbol real y nuestro arbol, esto nos da mucha mas versatilidad al momento de buscar (pues puedes tener una funcion que toca en 2 puntos a la funcion real, sin embargo esta trasladada), incluso aveces encontramos el arbol buscado!
+veamos la evolucion de el nuevo fitness
+
+
+Reference-style: 
+![alt text][fit6]
+
+[fit6]: codigo/ejercicio2y3/ecuacionConFit3.png
+
+Reference-style: 
+![alt text][encontrada]
+
+[encontrada]: codigo/ejercicio2y3/encontrado.png
+
+
+para correr el codigo sin graficos:
+
+    debes estar en la carpeta ejercicio2y3 y correr el siguiente codigo en la terminal
+    
+            python3 probandoEjercicio2.py singraf
+
+    con esto buscaras el numero la funcion x*x + x -6 usando la funcion fit3 que es la mejor de las 3
+    en la terminal se mostrara el arbol encontrado y el fitness.
+
+para correr el codigo con graficos:
+    debes estar en el ambiente virtual e instalar los requirements
+    luego debes dirigirte a la carpeta ejercicio2y3 y correr en la terminal
+
+            python3 probandoEjercicio2.py congraf
+
+    con esto buscaras el numero la funcion x*x + x -6 usando la funcion fit3 que es la mejor de las 3
+    en la terminal se mostrara el arbol encontrado y el fitness
+    y se creare una imagen llamada ecuacionConFit3.png en la carpeta ejercicio2y3. 
+
 
 ## ejercicio 4
 
