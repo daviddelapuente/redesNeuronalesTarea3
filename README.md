@@ -27,7 +27,6 @@ para correr el codigo con graficos:
     y se creare una imagen llamada fitnessEvolConrep.png en la carpeta ejercicio1.
 
 analisis:
-Reference-style: 
 ![alt text][fit1]
 
 [fit1]: codigo/ejercicio1/fitnessEvolConrep.png
@@ -61,7 +60,7 @@ para correr el codigo con graficos:
     y se creare una imagen llamada fitnessEvolConrepConcast.png en la carpeta ejercicio1.
 
 analisis:
-Reference-style: 
+
 ![alt text][fit2]
 
 [fit2]: codigo/ejercicio1/fitnessEvolConrepConcast.png
@@ -95,7 +94,7 @@ para correr el codigo con graficos:
     y se creare una imagen llamada fitnessEvolsinrep.png en la carpeta ejercicio1.
 
 analisis:
-Reference-style: 
+
 ![alt text][fit3]
 
 [fit3]: codigo/ejercicio1/fitnessEvolsinrep.png
@@ -117,7 +116,7 @@ la primera funcion fue bastante basica, y lo que hace es evaluar en el intervalo
 veamos la evolucion de su fitness.
 
 analisis:
-Reference-style: 
+
 ![alt text][fit4]
 
 [fit4]: codigo/ejercicio2y3/ecuacionConFit1.png
@@ -129,7 +128,7 @@ veamos la evolucion de el nuevo fitness.
 
 
 
-Reference-style: 
+
 ![alt text][fit5]
 
 [fit5]: codigo/ejercicio2y3/ecuacionConFit2.png
@@ -140,12 +139,12 @@ cambiando un poco el paradigma de como buscar la funcion, esta vez se cambia a u
 veamos la evolucion de el nuevo fitness
 
 
-Reference-style: 
+ 
 ![alt text][fit6]
 
 [fit6]: codigo/ejercicio2y3/ecuacionConFit3.png
 
-Reference-style: 
+
 ![alt text][encontrada]
 
 [encontrada]: codigo/ejercicio2y3/encontrado.png
