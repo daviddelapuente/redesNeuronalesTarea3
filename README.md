@@ -33,7 +33,8 @@ Reference-style:
 [porcentaje]: codigo/ejercicio1/fitnessEvolConrep.png
 
 
-
+para este grafico se uso la funcion fit1, que puede encontrarse en el archivo fitnessFunctions en la carpeta ejercicio1. es una funcion bastante simple que lo que hace es calcular que tan lejos esta la evaluacion de el arbol con el numero buscado.
+(el grafico es el fitness de los maximos de cada generacion y el maximo que pueden alcanzar es 0).
 
 
 
