@@ -180,9 +180,7 @@ para evitar castigar a los nodos que dividen por 0, se hace una funcion fitness 
 [fit10]: codigo/ejercicio4/ecuacionConFit4.png
 
 
-
-
-
+como se puede observar en la imagen, la mayoria de los fitness se mantienen cercano al 0, y cuando aparece una division por 0, el algoritmo la soporta y la erradica.
 
 
 para correr el codigo sin graficos:
