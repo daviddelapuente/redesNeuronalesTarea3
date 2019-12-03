@@ -1,3 +1,14 @@
+recuerda poner un ambiente virtual e instalar requirementes:
+en la misma carpeta que este README escribe en la terminal
+
+virtualenv -p python3 venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+luego ve a la carpeta codigo
+
+cd codigo
+
 # redesNeuronalesTarea3
 
 ## ejercicio 1 (encontrar un numero)
