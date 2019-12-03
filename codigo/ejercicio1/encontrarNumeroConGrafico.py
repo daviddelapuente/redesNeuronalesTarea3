@@ -1,6 +1,26 @@
+import matplotlib.pyplot as plt
 from astD import *
 from arboles import *
 
+def maximoDeFitness(F):
+    max=F[0]
+    for f in F:
+       if f>=max:
+           max=f
+    return max
+
+def minimoDeFitness(F):
+    min=F[0]
+    for f in F:
+        if f<=min:
+            min=f
+    return min
+
+def promedioDeFitness(F):
+    mean=0
+    for f in F:
+        mean+=f
+    return mean/len(F)
 
 #inicia una poblacion de largo populationLen, con individuos de profundidad maxima d definidos por el cjto de funciones F y los terminales T.
 def initPopulation(populationLen,a,d):
@@ -77,12 +97,15 @@ def mutarArbol(n1,mutability,a,d):
 
 
 #algoritmo genetico que encuentra un arbol que representa un numero, con repeticion de terminales
-def engineEncontrarNumero1(fitnessFunction,number,trys,populationLen,Ncompetitors,depth,F,T,mutability=1):
+def engineEncontrarNumeroConGrafico(fitnessFunction,number,trys,populationLen,Ncompetitors,depth,F,T,fileName,mutability=1):
     b=False
     a=AST(F,T,0.5)
     print("buscando arbol para: "+str(number))
     population = initPopulation(populationLen,a,depth)
 
+    maximos=[]
+    minimos=[]
+    promedios=[]
     
 
     #como queremos encontrar el mejor arbol, iteramos el numero de trys
@@ -149,6 +172,10 @@ def engineEncontrarNumero1(fitnessFunction,number,trys,populationLen,Ncompetitor
                 print("en iteracion "+str(t))
                 b=True
                 break
+        
+        maximos.append(maximoDeFitness(F))
+        minimos.append(minimoDeFitness(F))
+        promedios.append(promedioDeFitness(F))
 
         if b:
             break
@@ -157,3 +184,12 @@ def engineEncontrarNumero1(fitnessFunction,number,trys,populationLen,Ncompetitor
     print("best is "+str(population[best]))
     print("with fitness "+str(F[best]))
     print("eval is: "+str(population[best].eval()))
+    print("----------------------------------------")
+    print("ploting")
+    f1 = plt.figure(1)
+    ax1 = f1.add_subplot(111)
+    ax1.set_title("fitnesses")
+    ax1.set_xlabel('epochos')
+    ax1.set_ylabel('fitness')
+    ax1.plot(maximos, c='r')
+    f1.savefig(fileName+".png")
