@@ -11,7 +11,7 @@ para correr el codigo sin graficos:
 
     debes estar en la carpeta ejercicio1 y correr el siguiente codigo en la terminal
     
-            python3 probandoEjercicio1.py singraf conrep 65346
+            python3 probandoEjercicio1.py singraf conrep sincast  65346
 
     con esto buscaras el numero 65346 con repeticion de terminales (puedes buscar cualquier numero)
     en la terminal se mostrara el arbol encontrado, el fitness (mientras mas cercano a 0 mejor) y la evaluacion de el arbol.
@@ -20,7 +20,7 @@ para correr el codigo con graficos:
     debes estar en el ambiente virtual e instalar los requirements
     luego debes dirigirte a la carpeta ejercicio1 y correr en la terminal
 
-            python3 probandoEjercicio1.py congraf conrep 65346
+            python3 probandoEjercicio1.py congraf conrep sincast  65346
 
     con esto buscaras el numero 65346 con repeticion de terminales (puedes buscar cualquier numero)
     en la terminal se mostrara el arbol encontrado, el fitness (mientras mas cercano a 0 mejor) y la evaluacion de el arbol.
@@ -37,9 +37,38 @@ para este grafico se uso la funcion fit1, que puede encontrarse en el archivo fi
 (el grafico es el fitness de los maximos de cada generacion y el maximo que pueden alcanzar es 0).
 
 
+### con repeticion y castigo por largo de arbol
+
+el siguiente experimento es generar un arbol con un numero indeterminado de terminales (se pueden repetir) pero se castigara si el arbol es muy largo..
+
+para correr el codigo sin graficos:
+
+    debes estar en la carpeta ejercicio1 y correr el siguiente codigo en la terminal
+    
+            python3 probandoEjercicio1.py singraf conrep concast  65346
+
+    con esto buscaras el numero 65346 con repeticion de terminales (puedes buscar cualquier numero)
+    en la terminal se mostrara el arbol encontrado, el fitness (mientras mas cercano a 0 mejor) y la evaluacion de el arbol.
+
+para correr el codigo con graficos:
+    debes estar en el ambiente virtual e instalar los requirements
+    luego debes dirigirte a la carpeta ejercicio1 y correr en la terminal
+
+            python3 probandoEjercicio1.py congraf conrep concast  65346
+
+    con esto buscaras el numero 65346 con repeticion de terminales (puedes buscar cualquier numero) pero ademas castigaras a los arboles muy largos
+    en la terminal se mostrara el arbol encontrado, el fitness (mientras mas cercano a 0 mejor) y la evaluacion de el arbol.
+    y se creare una imagen llamada fitnessEvolConrepConcast.png en la carpeta ejercicio1.
+
+analisis:
+Reference-style: 
+![alt text][porcentaje]
+
+[porcentaje]: codigo/ejercicio1/fitnessEvolConrepConcast.png
 
 
-
+para este grafico se uso la funcion fit2, que puede encontrarse en el archivo fitnessFunctions en la carpeta ejercicio1. es una funcion bastante simple que lo que hace es calcular que tan lejos esta la evaluacion de el arbol con el numero buscado, pero ademas se le resta el largo de el arbol/100 (el 100 aparece empiricamente, ya que los tamanos de los arboles pueden ser muy grandes y matan la funcion fitness).
+(esta vez el maximo puede no ser 0 pues al restar el largo de el arbol, nos alejamos de el 0). 
 
 
 
