@@ -156,7 +156,7 @@ para correr el codigo sin graficos:
     
             python3 probandoEjercicio2.py singraf
 
-    con esto buscaras el numero la funcion x*x + x -6 usando la funcion fit3 que es la mejor de las 3
+    con esto buscaras la funcion x*x + x -6 usando la funcion fit3 que es la mejor de las 3
     en la terminal se mostrara el arbol encontrado y el fitness.
 
 para correr el codigo con graficos:
@@ -165,7 +165,7 @@ para correr el codigo con graficos:
 
             python3 probandoEjercicio2.py congraf
 
-    con esto buscaras el numero la funcion x*x + x -6 usando la funcion fit3 que es la mejor de las 3
+    con esto buscaras la funcion x*x + x -6 usando la funcion fit3 que es la mejor de las 3
     en la terminal se mostrara el arbol encontrado y el fitness
     y se creare una imagen llamada ecuacionConFit3.png en la carpeta ejercicio2y3. 
 
@@ -173,3 +173,20 @@ para correr el codigo con graficos:
 ## ejercicio 4
 
 ## heatmap
+para hacer el heatmap se eligio el problema 1 de el ejercicio 1 de encontrar el numero 65346, usando la funcion fit1 (la que no castiga y es con repeticion de terminales), se eligio esta funcion porque es la que tiene mas capacidad al momento de encontrar el numero.
+
+![alt text][heat]
+
+[heat]: codigo/ejercicio1/heatmap.png
+
+como se puede observar en el heatmap, se hicieron 100 iteraciones para 10 poblaciones distintas con 10 mutaciones distintas cada una.
+en el heatmap se grafica cuanto se demora el motor genetico en encontrar el numero 65346 (los colores frios representan las combinaciones que encuentran mas rapido el numero) y podemos observar que la mitad de abajo es donde mas rapido se encuentra el numero buscado es decir el numero de la poblacion influye mucho mas que las mutaciones. (al menos las mutaciones implementadas segun el enunciado).
+
+para correr el codigo con graficos:
+    debes estar en el ambiente virtual e instalar los requirements
+    luego debes dirigirte a la carpeta ejercicio1 y correr en la terminal
+
+            python3 heatmap.py 
+
+    con esto buscaras el numero 65346 con la funcion fit1 que se encuentra en el archivo fitnessFunctions.py en la carpeta ejercicio1
+    (advertencia el programa se demora como 30 min en correr)
