@@ -19,7 +19,6 @@ if sys.argv[1]=="singraf":
     elif sys.argv[2]=="sinrep":
         print("busqueda sin repeticion")
         F3=[AddNode,SubNode,MultNode]
-        T2=[25,7,8,100,4,2]
         engineEncontrarNumero1(fit3,int(sys.argv[3]),40,200,10,10,F3,T2)
 
 elif sys.argv[1]=="congraf":
@@ -30,3 +29,7 @@ elif sys.argv[1]=="congraf":
         elif sys.argv[3]=="concast":
             print("busqueda con graficos con repeticion con castigo")
             engineEncontrarNumeroConGrafico(fit2,int(sys.argv[4]),20,100,10,10,F2,T2,"fitnessEvolConrepConcast")
+    elif sys.argv[2]=="sinrep":
+        print("busqueda con grafico sin repeticion")
+        F3=[AddNode,SubNode,MultNode]
+        engineEncontrarNumeroConGrafico(fit3,int(sys.argv[3]),20,100,10,10,F2,T2,"fitnessEvolsinrep")
