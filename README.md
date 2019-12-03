@@ -171,6 +171,38 @@ para correr el codigo con graficos:
 
 
 ## ejercicio 4
+en este ejercicio se busca resolver el mismo problema de el ejercicio 2y3, pero se agrega un nodo de division. el cual se puede observar en el archivo arboles.py de la carpeta ejercicio4.
+
+para evitar castigar a los nodos que dividen por 0, se hace una funcion fitness que se comporta como la funcion fit3 de el ejercicio 3, con la diferencia que cuando evalua un nodo de division, si este divide por 0, atrapa la exepcion y castiga fuertemente al arbol (queremos que se muera).
+
+![alt text][fit10]
+
+[fit10]: codigo/ejercicio4/ecuacionConFit4.png
+
+
+
+
+
+
+
+para correr el codigo sin graficos:
+
+    debes estar en la carpeta ejercicio4 y correr el siguiente codigo en la terminal
+    
+            python3 probandoEjercicio4.py singgraf
+
+    con esto buscaras la funcion x*x + x -6 usando la funcion fit4 que se puede encontrar en el archivo fitnessFunctions.py de la carpeta ejercicio4
+    en la terminal se mostrara el arbol encontrado y el fitness.
+
+para correr el codigo con graficos:
+    debes estar en el ambiente virtual e instalar los requirements
+    luego debes dirigirte a la carpeta ejercicio4 y correr en la terminal
+
+            python3 probandoEjercicio4.py congraf
+
+    con esto buscaras la funcion x*x + x -6 usando la funcion fit4
+    en la terminal se mostrara el arbol encontrado y el fitness
+    y se creare una imagen llamada ecuacionConFit4.png en la carpeta ejercicio4.
 
 ## heatmap
 para hacer el heatmap se eligio el problema 1 de el ejercicio 1 de encontrar el numero 65346, usando la funcion fit1 (la que no castiga y es con repeticion de terminales), se eligio esta funcion porque es la que tiene mas capacidad al momento de encontrar el numero.

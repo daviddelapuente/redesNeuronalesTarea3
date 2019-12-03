@@ -127,7 +127,7 @@ class DivNode(BinaryNode):
         super(DivNode, self).__init__(_div, left, right)
         
     def __repr__(self):
-        return "({} * {})".format(*self.arguments)
+        return "({} / {})".format(*self.arguments)
     
     
 class TerminalNode(Node):

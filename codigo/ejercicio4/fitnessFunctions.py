@@ -28,5 +28,5 @@ def fit4(ac,ar,intervalo):
             d={"x":i}
             rate+=abs(ac.eval(d)-ar.eval(d))
         except ZeroDivisionError:
-            rate+=999999999
+            return -999999999
     return -1*rate
